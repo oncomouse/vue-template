@@ -58,13 +58,13 @@ module.exports = {
     'app/store/**/*': 'vuex',
     'test/unit/specs/store/**/*': 'vuex',
   },
-  complete: function(data, { chalk }) {
+  complete: (data, { chalk }) => {
     const { green } = chalk;
 
     const cwd = path.join(process.cwd(), data.inPlace ? '' : data.destDirName);
 
     if (data.autoInstall) {
-      installDependencies(cwd, data.autoInstall, green);
+      installDependencies(cwd, data.autoInstall, green)
         /*.then(() => {
           return runLintFix(cwd, data, green)
         })*/
