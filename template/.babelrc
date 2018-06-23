@@ -1,0 +1,29 @@
+{
+	"presets": [
+		["env", {
+			"modules": false,
+			"targets": {
+				"node": "current",
+				"browsers": "> 5%"
+			},
+			"useBuiltIns": true
+		}],
+		"stage-2"
+	],
+	"plugins": [
+		"tailcall-optimization"
+	],
+	"env": {
+		"test": {
+			"plugins": [
+				"tailcall-optimization",
+				["istanbul", {
+					"exclude": [
+						"**/*.spec.js",
+						"tests.webpack.js"
+					]
+				}]
+			]
+		}
+	}
+}
