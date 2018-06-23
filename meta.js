@@ -1,3 +1,5 @@
+const { printMessage, installDependencies } = require ('./utils');
+
 module.exports = {
   prompts: {
     name: {
