@@ -4,7 +4,7 @@ Basic app structure:
 
 ~~~
 app – Contains your application
-└──api – Mocked up API for https://jsonplaceholder.typicode.com/
+├──api – Mocked up API for https://jsonplaceholder.typicode.com/
 ├──components – Vue components
 ├──pages – Top-level, routed components
 ├──router – vue-router configuration
