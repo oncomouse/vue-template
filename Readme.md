@@ -1,6 +1,6 @@
 # Oncomouse's Vue Template
 
-An opinionated, fully-featured Vue.js template.
+An opinionated, fully-featured Vue.js template. For use with vue-cli.
 
 Features:
 
