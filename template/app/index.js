@@ -1,6 +1,8 @@
 import Vue from 'vue';
 import createRouter from './router';
+{{#vuex}}
 import createStore from './store';
+{{/vuex}}
 import App from './App.vue';
 
 const router = createRouter();
