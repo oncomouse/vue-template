@@ -1,4 +1,5 @@
 const { printMessage, installDependencies } = require ('./utils');
+const path = require('path');
 
 module.exports = {
   prompts: {
