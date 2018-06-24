@@ -29,6 +29,10 @@ module.exports = {
       label: 'Deployment URL',
       default: 'https://oncomouse.github.io/vue-app',
     },
+    chrome: {
+      type: 'confirm',
+      message: 'Is Google Chrome Installed?',
+    },
     vuex: {
       type: 'confirm',
       message: 'Install Vuex (state manager)?',
@@ -65,7 +69,7 @@ module.exports = {
     const cwd = path.join(process.cwd(), data.inPlace ? '' : data.destDirName);
 
     if (data.autoInstall) {
-      installDependencies(cwd, data.autoInstall, green)
+      installDependencies(cwd, data, green)
         /*.then(() => {
           return runLintFix(cwd, data, green)
         })*/

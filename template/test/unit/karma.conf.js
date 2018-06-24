@@ -1,4 +1,5 @@
 const webpackConfig = require('../../webpack.config.js');
+process.env.CHROME_BIN = require('puppeteer').executablePath();
 
 delete webpackConfig.entry;
 

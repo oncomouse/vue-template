@@ -31,13 +31,18 @@ function runCommand(cmd, args, options) {
 
 exports.installDependencies = function installDependencies(
   cwd,
-  executable = 'npm',
+  { autoInstall = 'npm', chrome },
   color
 ) {
+  const env = Object.create(process.env);
+  if(chrome) {
+    env['PUPPETEER_SKIP_CHROMIUM_DOWNLOAD'] = true;
+  }
   console.log(`\n\n# ${color('Installing project dependencies ...')}`);
   console.log('# ========================\n');
-  return runCommand(executable, ['install'], {
+  return runCommand(autoInstall, ['install'], {
     cwd,
+    env
   });
 };
 /**
