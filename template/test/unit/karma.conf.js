@@ -1,8 +1,7 @@
 const webpackConfig = require('../../webpack.config.js');
-{{#chrome}}
-{{else}}
+{{#if_eq chrome false}}
 process.env.CHROME_BIN = require('puppeteer').executablePath();
-{{/chrome}}
+{{/if_eq}}
 
 delete webpackConfig.entry;
 
